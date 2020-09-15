@@ -1,13 +1,13 @@
 import * as actionTypes from "../actions";
 
 const casinoCard1 = Math.floor(Math.random() * 10) + 2;
-const casinoCard2 = Math.floor(Math.random() * 10) + 2;
+//const casinoCard2 = Math.floor(Math.random() * 10) + 2;
 const userCard1 = Math.floor(Math.random() * 10) + 2;
 const userCard2 = Math.floor(Math.random() * 10) + 2;
 
 const initialState = {
-  casinoCards: [casinoCard1, casinoCard2],
-  casinoResult: casinoCard1 + casinoCard2,
+  casinoCards: [casinoCard1],
+  casinoResult: casinoCard1,
   userCards: [userCard1, userCard2],
   userResult: userCard1 + userCard2,
 };

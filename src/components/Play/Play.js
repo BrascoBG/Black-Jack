@@ -25,25 +25,39 @@ const Play = () => {
   };
 
   useEffect(() => {
-    console.log("heey");
+    if (userResult === 21) {
+      alert("Black Jack!");
+    }
   }, []);
+
+  useEffect(() => {
+    if (
+      casinoCards.length > 1 &&
+      casinoResult < userResult &&
+      casinoResult < 21
+    ) {
+      setTimeout(() => {
+        stand();
+      }, 1000);
+    }
+  }, [casinoCards]);
 
   return (
     <div>
       <h1>{money}</h1>
       <button onClick={hit}>HIT</button>
       <button onClick={stand}>STAND</button>
-      <h1>Casino: {casinoResult < 21 ? casinoResult : "You Win!"}</h1>
+      <h1>Casino: {casinoResult <= 21 ? casinoResult : "You Win!"}</h1>
       <h2>
-        {casinoCards.map((card) => (
-          <p>{card}</p>
+        {casinoCards.map((card, index) => (
+          <p key={index}>{card}</p>
         ))}
       </h2>
       <hr />
-      <h1>User: {userResult < 21 ? userResult : "You Lost"}</h1>
+      <h1>User: {userResult <= 21 ? userResult : "You Lost"}</h1>
       <h2>
-        {userCards.map((card) => (
-          <p>{card}</p>
+        {userCards.map((card, index) => (
+          <p key={index}>{card}</p>
         ))}
       </h2>
     </div>
