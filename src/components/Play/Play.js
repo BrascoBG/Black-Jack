@@ -26,7 +26,10 @@ const Play = () => {
 
   useEffect(() => {
     if (userResult === 21) {
-      alert("Black Jack!");
+      dispatch({
+        type: actionTypes.MESSAGE_LOST,
+        resMessage: "You WIN! Black Jack!",
+      });
     }
   }, []);
 
@@ -40,21 +43,49 @@ const Play = () => {
         stand();
       }, 1000);
     }
-  }, [casinoCards]);
+    if (casinoResult === userResult && casinoCards.length > 1) {
+      dispatch({
+        type: actionTypes.MESSAGE_DRAW,
+        resMessage: "DRAW!",
+      });
+    }
+    if (
+      casinoResult > userResult &&
+      casinoResult <= 21 &&
+      casinoCards.length > 1
+    ) {
+      dispatch({
+        type: actionTypes.MESSAGE_LOST,
+        resMessage: "You Lost!",
+      });
+    }
+    if (casinoResult > 21) {
+      dispatch({
+        type: actionTypes.MESSAGE_WIN,
+        resMessage: "You Win!",
+      });
+    }
+    if (userResult > 21) {
+      dispatch({
+        type: actionTypes.MESSAGE_LOST,
+        resMessage: "You Lost!",
+      });
+    }
+  }, [casinoCards, userResult]);
 
   return (
     <div>
       <h1>{money}</h1>
       <button onClick={hit}>HIT</button>
       <button onClick={stand}>STAND</button>
-      <h1>Casino: {casinoResult <= 21 ? casinoResult : "You Win!"}</h1>
+      <h1>Casino: {casinoResult}</h1>
       <h2>
         {casinoCards.map((card, index) => (
           <p key={index}>{card}</p>
         ))}
       </h2>
       <hr />
-      <h1>User: {userResult <= 21 ? userResult : "You Lost"}</h1>
+      <h1>User: {userResult}</h1>
       <h2>
         {userCards.map((card, index) => (
           <p key={index}>{card}</p>

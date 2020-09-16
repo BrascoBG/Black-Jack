@@ -6,15 +6,15 @@ const initialState = {
 
 const moneyReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.INCREASE_MONEY:
+    case actionTypes.BET_PLACED_WIN:
       return {
         ...state,
-        money: state.money + 20,
+        money: state.money + action.bet,
       };
-    case actionTypes.DECREASE_MONEY:
+    case actionTypes.BET_PLACED_LOST:
       return {
         ...state,
-        money: state.money - 20,
+        money: state.money - action.bet,
       };
     default:
       return state;

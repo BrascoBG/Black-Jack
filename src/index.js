@@ -7,10 +7,12 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import moneyReducer from "./store/reducers/moneyReducer";
 import scoreReducer from "./store/reducers/scoreReducer";
+import messageReducer from "./store/reducers/messageReducer";
 
 const rootReducers = combineReducers({
   moneyReducer: moneyReducer,
   scoreReducer: scoreReducer,
+  messageReducer: messageReducer,
 });
 
 const store = createStore(
