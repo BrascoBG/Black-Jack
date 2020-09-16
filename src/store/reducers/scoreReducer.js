@@ -1,13 +1,12 @@
 import * as actionTypes from "../actions";
 
-const casinoCard1 = Math.floor(Math.random() * 10) + 2;
-//const casinoCard2 = Math.floor(Math.random() * 10) + 2;
+const casinoCard = Math.floor(Math.random() * 10) + 2;
 const userCard1 = Math.floor(Math.random() * 10) + 2;
 const userCard2 = Math.floor(Math.random() * 10) + 2;
 
 const initialState = {
-  casinoCards: [casinoCard1],
-  casinoResult: casinoCard1,
+  casinoCards: [casinoCard],
+  casinoResult: casinoCard,
   userCards: [userCard1, userCard2],
   userResult: userCard1 + userCard2,
 };
@@ -25,6 +24,16 @@ const scoreReducer = (state = initialState, action) => {
         ...state,
         userCards: state.userCards.concat(action.card),
         userResult: state.userResult + action.card,
+      };
+    case actionTypes.RESET_CARDS:
+      const resCasinoCard = Math.floor(Math.random() * 10) + 2;
+      const resUserCard1 = Math.floor(Math.random() * 10) + 2;
+      const resUserCard2 = Math.floor(Math.random() * 10) + 2;
+      return {
+        casinoCards: [resCasinoCard],
+        casinoResult: resCasinoCard,
+        userCards: [resUserCard1, resUserCard2],
+        userResult: resUserCard1 + resUserCard2,
       };
     default:
       return state;

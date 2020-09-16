@@ -8,6 +8,7 @@ const Play = () => {
   const userCards = useSelector((state) => state.scoreReducer.userCards);
   const casinoResult = useSelector((state) => state.scoreReducer.casinoResult);
   const userResult = useSelector((state) => state.scoreReducer.userResult);
+  const showApp = useSelector((state) => state.showReducer.showApp);
   const dispatch = useDispatch();
 
   const hit = () => {
@@ -27,10 +28,11 @@ const Play = () => {
   useEffect(() => {
     if (userResult === 21) {
       dispatch({
-        type: actionTypes.MESSAGE_LOST,
-        resMessage: "You WIN! Black Jack!",
+        type: actionTypes.MESSAGE_WIN,
+        resMessage: "You Win! BLACK JACK!",
       });
     }
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -71,26 +73,29 @@ const Play = () => {
         resMessage: "You Lost!",
       });
     }
+    // eslint-disable-next-line
   }, [casinoCards, userResult]);
 
   return (
     <div>
-      <h1>{money}</h1>
-      <button onClick={hit}>HIT</button>
-      <button onClick={stand}>STAND</button>
-      <h1>Casino: {casinoResult}</h1>
-      <h2>
-        {casinoCards.map((card, index) => (
-          <p key={index}>{card}</p>
-        ))}
-      </h2>
-      <hr />
-      <h1>User: {userResult}</h1>
-      <h2>
-        {userCards.map((card, index) => (
-          <p key={index}>{card}</p>
-        ))}
-      </h2>
+      <h1>My Money: ${money}</h1>
+      <div style={showApp ? { display: "block" } : { display: "none" }}>
+        <button onClick={hit}>HIT</button>
+        <button onClick={stand}>STAND</button>
+        <h1>Casino: {casinoResult}</h1>
+        <h2>
+          {casinoCards.map((card, index) => (
+            <p key={index}>{card}</p>
+          ))}
+        </h2>
+        <hr />
+        <h1>User: {userResult}</h1>
+        <h2>
+          {userCards.map((card, index) => (
+            <p key={index}>{card}</p>
+          ))}
+        </h2>
+      </div>
     </div>
   );
 };

@@ -21,6 +21,11 @@ const messageReducer = (state = initialState, action) => {
         ...state,
         message: action.resMessage,
       };
+    case actionTypes.RESET_MESSAGE:
+      return {
+        ...state,
+        message: "",
+      };
     default:
       return state;
   }

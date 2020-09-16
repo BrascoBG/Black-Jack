@@ -8,11 +8,13 @@ import { Provider } from "react-redux";
 import moneyReducer from "./store/reducers/moneyReducer";
 import scoreReducer from "./store/reducers/scoreReducer";
 import messageReducer from "./store/reducers/messageReducer";
+import showReducer from "./store/reducers/showReducer";
 
 const rootReducers = combineReducers({
   moneyReducer: moneyReducer,
   scoreReducer: scoreReducer,
   messageReducer: messageReducer,
+  showReducer: showReducer,
 });
 
 const store = createStore(
