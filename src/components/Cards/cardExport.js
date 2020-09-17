@@ -41,7 +41,13 @@ const cardExport = [
   },
   {
     id: 9,
-    src: require("../../assets/cards/10H.png"),
+    src: require("../../assets/cards/JH.png"),
+    // [
+    //   require("../../assets/cards/10H.png"),
+    //   require("../../assets/cards/JH.png"),
+    //   require("../../assets/cards/KH.png"),
+    //   require("../../assets/cards/QH.png"),
+    // ],
     title: "10H",
   },
   {

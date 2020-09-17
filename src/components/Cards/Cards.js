@@ -12,9 +12,7 @@ const Cards = (props) => {
       {casinoCards.map((card, index) => {
         for (const img of images) {
           if (card === img.id + 1) {
-            return (
-              <img key={index} width="70px" alt={img.title} src={img.src} />
-            );
+            return <img key={index} alt={img.title} src={img.src} />;
           }
         }
       })}
@@ -24,7 +22,11 @@ const Cards = (props) => {
         for (const img of images) {
           if (card === img.id + 1) {
             return (
-              <img key={index} width="70px" alt={img.title} src={img.src} />
+              <img
+                key={index}
+                alt={img.title}
+                src={img.src} //[Math.floor(Math.random() * img.src.length)]
+              />
             );
           }
         }
