@@ -1,7 +1,7 @@
 import React from "react";
 import Play from "./components/Play/Play";
 import Bet from "./components/Bet/Bet";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

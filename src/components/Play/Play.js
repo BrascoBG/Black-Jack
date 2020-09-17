@@ -26,14 +26,14 @@ const Play = () => {
   };
 
   useEffect(() => {
-    if (userResult === 21) {
+    if (userResult === 21 && showApp === true && userCards.length === 2) {
       dispatch({
         type: actionTypes.MESSAGE_WIN,
         resMessage: "You Win! BLACK JACK!",
       });
     }
     // eslint-disable-next-line
-  }, []);
+  }, [showApp]);
 
   useEffect(() => {
     if (
