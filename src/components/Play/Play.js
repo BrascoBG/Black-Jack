@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actionTypes from "../../store/actions";
+import Cards from "../Cards/Cards";
 
 const Play = () => {
   const money = useSelector((state) => state.moneyReducer.money);
@@ -82,19 +83,7 @@ const Play = () => {
       <div style={showApp ? { display: "block" } : { display: "none" }}>
         <button onClick={hit}>HIT</button>
         <button onClick={stand}>STAND</button>
-        <h1>Casino: {casinoResult}</h1>
-        <h2>
-          {casinoCards.map((card, index) => (
-            <p key={index}>{card}</p>
-          ))}
-        </h2>
-        <hr />
-        <h1>User: {userResult}</h1>
-        <h2>
-          {userCards.map((card, index) => (
-            <p key={index}>{card}</p>
-          ))}
-        </h2>
+        <Cards casinoRes={casinoResult} userRes={userResult} />
       </div>
     </div>
   );
