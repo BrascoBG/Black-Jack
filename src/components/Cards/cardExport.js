@@ -6,7 +6,7 @@ const cardExport = [
       require("../../assets/cards/2C.png"),
       require("../../assets/cards/2D.png"),
       require("../../assets/cards/2S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "two",
   },
   {
@@ -16,7 +16,7 @@ const cardExport = [
       require("../../assets/cards/3C.png"),
       require("../../assets/cards/3D.png"),
       require("../../assets/cards/3S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "three",
   },
   {
@@ -26,7 +26,7 @@ const cardExport = [
       require("../../assets/cards/4C.png"),
       require("../../assets/cards/4D.png"),
       require("../../assets/cards/4S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "four",
   },
   {
@@ -36,7 +36,7 @@ const cardExport = [
       require("../../assets/cards/5C.png"),
       require("../../assets/cards/5D.png"),
       require("../../assets/cards/5S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "five",
   },
   {
@@ -46,7 +46,7 @@ const cardExport = [
       require("../../assets/cards/6C.png"),
       require("../../assets/cards/6D.png"),
       require("../../assets/cards/6S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "six",
   },
   {
@@ -56,7 +56,7 @@ const cardExport = [
       require("../../assets/cards/7C.png"),
       require("../../assets/cards/7D.png"),
       require("../../assets/cards/7S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "seven",
   },
   {
@@ -66,7 +66,7 @@ const cardExport = [
       require("../../assets/cards/8C.png"),
       require("../../assets/cards/8D.png"),
       require("../../assets/cards/8S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "eight",
   },
   {
@@ -76,7 +76,7 @@ const cardExport = [
       require("../../assets/cards/9C.png"),
       require("../../assets/cards/9D.png"),
       require("../../assets/cards/9S.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "nine",
   },
   {
@@ -98,7 +98,7 @@ const cardExport = [
       require("../../assets/cards/JS.png"),
       require("../../assets/cards/KS.png"),
       require("../../assets/cards/QS.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "ten",
   },
   {
@@ -108,7 +108,7 @@ const cardExport = [
       require("../../assets/cards/AC.png"),
       require("../../assets/cards/AD.png"),
       require("../../assets/cards/AS.png"),
-    ],
+    ].sort(() => 0.5 - Math.random()),
     title: "eleven",
   },
 ];

@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import images from "./cardExport";
 
 const Cards = (props) => {
   const casinoCards = useSelector((state) => state.scoreReducer.casinoCards);
   const userCards = useSelector((state) => state.scoreReducer.userCards);
-  const [cardImagesFour] = useState(Math.floor(Math.random() * 3));
-  const [cardImagesSixteen] = useState(Math.floor(Math.random() * 15));
-
-  useEffect(() => {
-    console.log(cardImagesFour);
-    console.log(cardImagesSixteen);
-  }, [cardImagesFour, cardImagesSixteen]);
+  // const [cardImagesFour] = useState(Math.floor(Math.random() * 3));
+  // const [cardImagesSixteen] = useState(Math.floor(Math.random() * 15));
 
   return (
     <div>
@@ -19,17 +14,7 @@ const Cards = (props) => {
       {casinoCards.map((card, index) => {
         for (const img of images) {
           if (card === img.id + 1) {
-            return (
-              <img
-                key={index}
-                alt={img.title}
-                src={
-                  img.src[
-                    img.src.length === 4 ? cardImagesFour : cardImagesSixteen
-                  ]
-                }
-              />
-            );
+            return <img key={index} alt={img.title} src={img.src[0]} />;
           }
         }
       })}
@@ -38,17 +23,7 @@ const Cards = (props) => {
       {userCards.map((card, index) => {
         for (const img of images) {
           if (card === img.id + 1) {
-            return (
-              <img
-                key={index}
-                alt={img.title}
-                src={
-                  img.src[
-                    img.src.length === 4 ? cardImagesFour : cardImagesSixteen
-                  ]
-                }
-              />
-            );
+            return <img key={index} alt={img.title} src={img.src[0]} />;
           }
         }
       })}
