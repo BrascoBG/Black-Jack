@@ -1,0 +1,45 @@
+.pokerchip {
+  cursor: pointer;
+  margin: 0.5em;
+  font-size: 1.2em;
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 5em;
+  height: 5em;
+  background: #928e66;
+  border-radius: 50%;
+  position: relative;
+  border: 0.5em dashed white;
+  transition: all 0.5s ease;
+  backface-visibility: hidden;
+  &.red {
+    background: #dd4631;
+  }
+  &.blue {
+    background: #317ddd;
+  }
+  &.green {
+    background: green;
+  }
+  &.black {
+    background: black;
+  }
+  &.iso {
+    transform: perspective(3000px) rotateX(55deg) rotateZ(-40deg);
+    box-shadow: -1px 1px 0px #000, -2px 2px 0px #000, -3px 3px 0px #000,
+      -4px 4px 0px #000, -5px 5px 0px #000, -6px 15px 8px #000;
+    &:hover {
+      transform: perspective(3000px) rotateX(55deg) rotateZ(-40deg)
+        translateZ(0.5em);
+    }
+  }
+}
+.money {
+  font-weight: bold;
+  color: #fffbfbc2;
+  font-size: x-large;
+  text-shadow: 2px 2px 15px black;
+}

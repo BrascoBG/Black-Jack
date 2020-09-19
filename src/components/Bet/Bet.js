@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actionTypes from "../../store/actions";
 import Modal from "../Modal/Modal";
+import styles from "./Bet.module.scss";
 
 const Bet = () => {
   const [myBet, setMyBet] = useState(0);
@@ -58,21 +59,37 @@ const Bet = () => {
         <button onClick={resetHandler}>OK</button>
       </Modal>
       <div style={showApp ? { display: "none" } : { display: "block" }}>
-        <button onClick={() => setMyBet((prevState) => prevState + 5)}>
-          5
-        </button>
-        <button onClick={() => setMyBet((prevState) => prevState + 25)}>
-          25
-        </button>
-        <button onClick={() => setMyBet((prevState) => prevState + 50)}>
-          50
-        </button>
-        <button onClick={() => setMyBet((prevState) => prevState + 75)}>
-          75
-        </button>
-        <button onClick={() => setMyBet((prevState) => prevState + 100)}>
-          100
-        </button>
+        <div
+          onClick={() => setMyBet((prevState) => prevState + 5)}
+          className={`${styles.pokerchip} ${styles.iso}`}
+        >
+          <span className={styles.money}>$5</span>
+        </div>
+        <div
+          onClick={() => setMyBet((prevState) => prevState + 25)}
+          className={`${styles.pokerchip} ${styles.iso} ${styles.red}`}
+        >
+          <span className={styles.money}>$25</span>
+        </div>
+        <div
+          onClick={() => setMyBet((prevState) => prevState + 50)}
+          className={`${styles.pokerchip} ${styles.iso} ${styles.blue}`}
+        >
+          <span className={styles.money}>$50</span>
+        </div>
+        <div
+          onClick={() => setMyBet((prevState) => prevState + 75)}
+          className={`${styles.pokerchip} ${styles.iso} ${styles.green}`}
+        >
+          <span className={styles.money}>$75</span>
+        </div>
+        <div
+          onClick={() => setMyBet((prevState) => prevState + 100)}
+          className={`${styles.pokerchip} ${styles.iso} ${styles.black}`}
+        >
+          <span className={styles.money}>$100</span>
+        </div>
+
         <button
           disabled={myBet === 0}
           onClick={() => dispatch({ type: actionTypes.SHOW_APP_TOGGLE })}
