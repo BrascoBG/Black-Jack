@@ -83,7 +83,7 @@ const Play = () => {
       <div style={showApp ? { display: "block" } : { display: "none" }}>
         <button onClick={hit}>HIT</button>
         <button onClick={stand}>STAND</button>
-        <Cards casinoRes={casinoResult} userRes={userResult} />
+        <Cards casinoRes={casinoResult} userRes={userResult} show={showApp} />
       </div>
     </div>
   );

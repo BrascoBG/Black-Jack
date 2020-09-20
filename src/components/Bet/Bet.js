@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actionTypes from "../../store/actions";
 import Modal from "../Modal/Modal";
 import styles from "./Bet.module.scss";
+import { gsap } from "gsap";
 
 const Bet = () => {
   const [myBet, setMyBet] = useState(0);
@@ -52,13 +53,24 @@ const Bet = () => {
     setModalMessage(false);
   };
 
+  useEffect(() => {
+    gsap.from(".demo", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+    });
+  }, []);
+
   return (
     <div>
       <Modal status={modalMessage}>
         <h3>{message}</h3>
         <button onClick={resetHandler}>OK</button>
       </Modal>
-      <div style={showApp ? { display: "none" } : { display: "block" }}>
+      <div
+        className="demo"
+        style={showApp ? { display: "none" } : { display: "block" }}
+      >
         <div
           onClick={() => setMyBet((prevState) => prevState + 5)}
           className={`${styles.pokerchip} ${styles.iso}`}

@@ -2,4 +2,6 @@ $position: center;
 
 .App {
   text-align: $position;
+  background-image: radial-gradient(circle, green, black);
+  height: 100vh;
 }
