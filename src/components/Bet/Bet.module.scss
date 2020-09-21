@@ -1,6 +1,19 @@
+$goldenColor: linear-gradient(
+  to right,
+  #462523 0,
+  #cb9b51 22%,
+  #f6e27a 45%,
+  #f6f2c0 50%,
+  #f6e27a 55%,
+  #cb9b51 78%,
+  #462523 100%
+);
+.wrap {
+  margin: auto;
+}
 .pokerchip {
   cursor: pointer;
-  margin: 0.5em;
+  margin: 0em 0.5em;
   font-size: 1.2em;
   position: relative;
   display: inline-block;
@@ -42,4 +55,78 @@
   color: #fffbfbc2;
   font-size: x-large;
   text-shadow: 2px 2px 15px black;
+}
+.bet {
+  width: 300px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  h3 {
+    background-image: $goldenColor;
+  }
+}
+.mybet {
+  font-family: "Times New Roman", serif;
+  letter-spacing: 5px;
+  font-size: 80px;
+  font-weight: bold;
+  background-image: $goldenColor;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.place {
+  transform: translateY(-100%);
+  color: #002400;
+}
+#space {
+  margin-bottom: 35px;
+}
+.deal {
+  cursor: pointer;
+  margin: 15px auto 20px auto;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #9dfda1;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  &:hover {
+    background-color: #9c0404;
+    color: #fff;
+    transition: all 0.5s;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.betsecond {
+  position: fixed;
+  bottom: 0;
+  width: 200px;
+  border-radius: 10px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  h3 {
+    background-image: $goldenColor;
+    font-size: 15px;
+  }
+  .mybet {
+    font-family: "Times New Roman", serif;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    background-image: $goldenColor;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }

@@ -1,0 +1,49 @@
+$goldenColor: linear-gradient(
+  to right,
+  #462523 0,
+  #cb9b51 22%,
+  #f6e27a 45%,
+  #f6f2c0 50%,
+  #f6e27a 55%,
+  #cb9b51 78%,
+  #462523 100%
+);
+.money {
+  width: 300px;
+  border-radius: 10px;
+  margin: 15px auto 0px auto;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  h3 {
+    background-image: $goldenColor;
+  }
+}
+.player {
+  font-family: "Times New Roman", serif;
+  letter-spacing: 5px;
+  font-size: 80px;
+  font-weight: bold;
+  background-image: $goldenColor;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.moneysecond {
+  width: 200px;
+  border-radius: 10px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  font-size: 20px;
+  h3 {
+    background-image: $goldenColor;
+    font-size: 15px;
+  }
+  .player {
+    font-family: "Times New Roman", serif;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    background-image: $goldenColor;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}

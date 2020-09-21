@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actionTypes from "../../store/actions";
+import styles from "./Play.module.scss";
 import Cards from "../Cards/Cards";
 
 const Play = () => {
@@ -79,7 +80,10 @@ const Play = () => {
 
   return (
     <div>
-      <h1>My Money: ${money}</h1>
+      <div className={!showApp ? styles.money : styles.moneysecond}>
+        <h3>My Money</h3>
+        <h1 className={styles.player}>${money}</h1>
+      </div>
       <div style={showApp ? { display: "block" } : { display: "none" }}>
         <button onClick={hit}>HIT</button>
         <button onClick={stand}>STAND</button>

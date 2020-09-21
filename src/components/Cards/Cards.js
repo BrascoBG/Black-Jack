@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import images from "./cardExport";
 import { gsap } from "gsap";
@@ -6,25 +6,24 @@ import { gsap } from "gsap";
 const Cards = (props) => {
   const casinoCards = useSelector((state) => state.scoreReducer.casinoCards);
   const userCards = useSelector((state) => state.scoreReducer.userCards);
+  let casinoElement = useRef(null);
 
   useEffect(() => {
-    gsap.from(`.user-card:last-child`, {
-      rotation: 360,
-      y: -500,
+    gsap.to(".user-card", {
+      y: "0px",
+      opacity: 1,
+      rotation: 180,
       duration: 0.5,
     });
-    console.log("User");
   }, [props.show, userCards]);
 
   useEffect(() => {
-    if (casinoCards.length > 2) {
-      gsap.from(`.casino:last-child`, {
-        rotation: 360,
-        y: -500,
-        duration: 0.5,
-      });
-      console.log("Casino");
-    }
+    gsap.to(casinoElement, {
+      y: "0px",
+      rotation: 180 + "random(-10, 10)",
+      opacity: 1,
+      duration: 0.5,
+    });
   }, [props.show, casinoCards]);
 
   return (
@@ -37,10 +36,19 @@ const Cards = (props) => {
             if (card === img.id + 1) {
               return (
                 <img
-                  className="casino"
+                  // eslint-disable-next-line no-loop-func
+                  ref={(el) => {
+                    casinoElement = el;
+                  }}
+                  className="casino-card"
                   key={index}
                   alt={img.title}
                   src={img.src[0]}
+                  style={{
+                    transform: "translateY(-100px) rotate(0deg)",
+                    opacity: 0,
+                    marginRight: "-50px",
+                  }}
                 />
               );
             }
@@ -60,6 +68,10 @@ const Cards = (props) => {
                   key={index}
                   alt={img.title}
                   src={img.src[0]}
+                  style={{
+                    transform: "translateY(-300px)",
+                    marginRight: "-50px",
+                  }}
                 />
               );
             }

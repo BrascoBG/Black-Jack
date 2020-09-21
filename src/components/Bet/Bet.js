@@ -54,12 +54,35 @@ const Bet = () => {
   };
 
   useEffect(() => {
-    gsap.from(".demo", {
+    gsap.from(`.${styles.wrap}`, {
       opacity: 0,
-      y: 100,
-      duration: 1,
+      duration: 2,
     });
-  }, []);
+    gsap.to(`.${styles.place}`, {
+      duration: 1,
+      y: "100%",
+      stagger: 0.3,
+    });
+  }, [showApp]);
+
+  const makeBet = (bet) => {
+    setMyBet((prevState) => prevState + bet);
+  };
+
+  useEffect(() => {
+    gsap.fromTo(
+      `.${styles.mybet}`,
+      {
+        rotateX: 0,
+        scaleY: 2,
+        duration: 1,
+      },
+      {
+        rotateX: 360,
+        scaleY: 1,
+      }
+    );
+  }, [myBet]);
 
   return (
     <div>
@@ -68,48 +91,58 @@ const Bet = () => {
         <button onClick={resetHandler}>OK</button>
       </Modal>
       <div
-        className="demo"
+        className={styles.wrap}
         style={showApp ? { display: "none" } : { display: "block" }}
       >
+        <h2 className={styles.place}>Click on the chips and</h2>
+        <h2 id={styles.space} className={styles.place}>
+          Place Your Bet!
+        </h2>
         <div
-          onClick={() => setMyBet((prevState) => prevState + 5)}
+          onClick={() => makeBet(5)}
           className={`${styles.pokerchip} ${styles.iso}`}
         >
           <span className={styles.money}>$5</span>
         </div>
         <div
-          onClick={() => setMyBet((prevState) => prevState + 25)}
+          onClick={() => makeBet(25)}
           className={`${styles.pokerchip} ${styles.iso} ${styles.red}`}
         >
           <span className={styles.money}>$25</span>
         </div>
         <div
-          onClick={() => setMyBet((prevState) => prevState + 50)}
+          onClick={() => makeBet(50)}
           className={`${styles.pokerchip} ${styles.iso} ${styles.blue}`}
         >
           <span className={styles.money}>$50</span>
         </div>
         <div
-          onClick={() => setMyBet((prevState) => prevState + 75)}
+          onClick={() => makeBet(75)}
           className={`${styles.pokerchip} ${styles.iso} ${styles.green}`}
         >
           <span className={styles.money}>$75</span>
         </div>
         <div
-          onClick={() => setMyBet((prevState) => prevState + 100)}
+          onClick={() => makeBet(100)}
           className={`${styles.pokerchip} ${styles.iso} ${styles.black}`}
         >
           <span className={styles.money}>$100</span>
         </div>
-
+      </div>
+      <div style={showApp ? { display: "none" } : { display: "block" }}>
         <button
-          disabled={myBet === 0}
+          className={styles.deal}
           onClick={() => dispatch({ type: actionTypes.SHOW_APP_TOGGLE })}
+          style={{ visibility: myBet === 0 && "hidden" }}
         >
           DEAL
         </button>
       </div>
-      <h4>My Bet: ${myBet}</h4>
+
+      <div className={!showApp ? styles.bet : styles.betsecond}>
+        <h3>My Bet</h3>
+        <h1 className={styles.mybet}>${myBet}</h1>
+      </div>
     </div>
   );
 };
