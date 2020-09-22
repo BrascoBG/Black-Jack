@@ -1,0 +1,132 @@
+.Intro {
+  .rela {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+  }
+  & img {
+    width: 700px;
+  }
+  .Jack {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      background-image: linear-gradient(
+        to right,
+        #462523 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+      );
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-size: 40px;
+      font-family: "Lobster", cursive;
+    }
+    h3 {
+      background-image: linear-gradient(
+        to right,
+        #462523 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+      );
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-size: 30px;
+      font-family: "Lobster", cursive;
+    }
+  }
+  .Play {
+    margin: 0 20px;
+    padding: 15px 25px;
+    font-size: xx-large;
+    border: none;
+    cursor: pointer;
+    background: #f1c954;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: #539642;
+    &:hover {
+      background: #9a1312;
+    }
+  }
+  .button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #539642;
+    color: #f6e27a;
+    &:hover {
+      background: #002500;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .Intro {
+    .rela {
+      width: 500px;
+    }
+    & img {
+      width: 500px;
+    }
+    .Jack {
+      top: 45%;
+      h1 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 500px) {
+  .Intro {
+    margin-top: 100px;
+    .rela {
+      width: 350px;
+      margin-bottom: 40px;
+    }
+    & img {
+      width: 350px;
+    }
+    .Jack {
+      top: 45%;
+      h1 {
+        font-size: 25px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+    }
+    .Play {
+      padding: 5px 15px;
+    }
+  }
+}

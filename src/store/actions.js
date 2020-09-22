@@ -5,6 +5,7 @@ export const USER_CARD = "USER_CARD";
 export const MESSAGE_WIN = "MESSAGE_WIN";
 export const MESSAGE_LOST = "MESSAGE_LOST";
 export const MESSAGE_DRAW = "MESSAGE_DRAW";
+export const MESSAGE_GAME_OVER = "MESSAGE_GAME_OVER";
 export const RESET_BETS = "RESET_BETS";
 export const RESET_CARDS = "RESET_CARDS";
 export const RESET_MESSAGE = "RESET_MESSAGE";

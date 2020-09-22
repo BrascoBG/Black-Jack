@@ -10,6 +10,11 @@ $goldenColor: linear-gradient(
 );
 .wrap {
   margin: auto;
+  .Coins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 .pokerchip {
   cursor: pointer;

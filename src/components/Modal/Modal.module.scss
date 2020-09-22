@@ -60,17 +60,30 @@
 @media screen and(max-width: 490px) {
   .Modal {
     left: 10%;
-    & img {
-      width: 300px;
-    }
+
     & h3 {
       font-size: 18px;
-      margin-top: -100px;
+      margin-top: -115px;
       margin-left: -25px;
     }
     & button {
       margin-left: 80px;
-      padding: 2px 5px;
+      padding: 4px 9px;
+    }
+  }
+}
+@media screen and(max-width: 390px) {
+  .Modal {
+    left: 1%;
+
+    & h3 {
+      font-size: 18px;
+      margin-top: -115px;
+      margin-left: 25px;
+    }
+    & button {
+      margin-left: 117px;
+      padding: 4px 9px;
     }
   }
 }
