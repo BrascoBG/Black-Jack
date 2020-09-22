@@ -1,6 +1,7 @@
 import React from "react";
 import Backdrop from "../Backdrop/Backdrop";
-import styles from "./Modal.module.css";
+import styles from "./Modal.module.scss";
+import modalImg from "../../assets/images/modal.png";
 
 const Modal = (props) => {
   return (
@@ -12,6 +13,7 @@ const Modal = (props) => {
           transform: props.status ? "translateY(0)" : "translateY(-100vh)",
         }}
       >
+        <img src={modalImg} alt="cards" />
         {props.children}
       </div>
     </React.Fragment>

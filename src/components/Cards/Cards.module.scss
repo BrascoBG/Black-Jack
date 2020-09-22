@@ -1,0 +1,11 @@
+.cards {
+  & h3 {
+    text-align: left;
+    background-image: radial-gradient(#d1a557, transparent);
+    width: 110px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e5ea93;
+    text-shadow: 1px 1px 1px black;
+  }
+}

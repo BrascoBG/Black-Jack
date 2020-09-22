@@ -1,0 +1,76 @@
+.Modal {
+  position: fixed;
+  z-index: 1500;
+  width: 70%;
+  left: 15%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  text-align: center;
+  & h3 {
+    margin-top: -160px;
+    margin-left: -115px;
+    color: #d1a121;
+    font-size: 23px;
+  }
+  & button {
+    cursor: pointer;
+    margin-right: 110px;
+    margin-top: 10px;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #d1a121;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-weight: bold;
+    &:hover {
+      background: #e4a600;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .Modal img {
+    width: 350px;
+  }
+  .Modal h3 {
+    margin-top: -121px;
+    margin-left: -75px;
+    font-size: 21px;
+  }
+  .Modal button {
+    margin-left: 40px;
+  }
+}
+
+@media screen and(max-width: 490px) {
+  .Modal {
+    left: 10%;
+    & img {
+      width: 300px;
+    }
+    & h3 {
+      font-size: 18px;
+      margin-top: -100px;
+      margin-left: -25px;
+    }
+    & button {
+      margin-left: 80px;
+      padding: 2px 5px;
+    }
+  }
+}

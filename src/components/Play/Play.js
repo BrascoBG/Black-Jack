@@ -31,7 +31,7 @@ const Play = () => {
     if (userResult === 21 && showApp === true && userCards.length === 2) {
       dispatch({
         type: actionTypes.MESSAGE_WIN,
-        resMessage: "You Win! BLACK JACK!",
+        resMessage: "Black Jack!",
       });
     }
     // eslint-disable-next-line
@@ -85,9 +85,21 @@ const Play = () => {
         <h1 className={styles.player}>${money}</h1>
       </div>
       <div style={showApp ? { display: "block" } : { display: "none" }}>
-        <button onClick={hit}>HIT</button>
-        <button onClick={stand}>STAND</button>
-        <Cards casinoRes={casinoResult} userRes={userResult} show={showApp} />
+        <div className={styles.buttons}>
+          <button
+            style={{ visibility: casinoCards.length > 1 && "hidden" }}
+            onClick={stand}
+          >
+            STAND
+          </button>
+          <Cards casinoRes={casinoResult} userRes={userResult} show={showApp} />
+          <button
+            style={{ visibility: casinoCards.length > 1 && "hidden" }}
+            onClick={hit}
+          >
+            HIT
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const Bet = () => {
         setModalMessage(true);
       }, 600);
     }
-    if (message === "You Win!" || message === "You Win! BLACK JACK!") {
+    if (message === "You Win!" || message === "Black Jack!") {
       dispatch({
         type: actionTypes.BET_PLACED_WIN,
         bet: myBet,
