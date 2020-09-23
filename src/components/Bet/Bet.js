@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actionTypes from "../../store/actions";
 import Modal from "../Modal/Modal";
-import HeadButtons from "../HeadButtons/Buttons";
 import styles from "./Bet.module.scss";
 import { Redirect } from "react-router";
 import { gsap } from "gsap";
@@ -115,7 +114,6 @@ const Bet = () => {
 
   return (
     <div>
-      {showApp && <HeadButtons />}
       <Modal status={modalMessage}>
         <h3>{message}</h3>
         <button

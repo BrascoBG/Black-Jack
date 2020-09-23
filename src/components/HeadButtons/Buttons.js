@@ -8,14 +8,14 @@ const Buttons = () => {
   return (
     <div className={styles.buttons}>
       <NavLink to="/">
-        <img style={{ width: "25%" }} src={Home} alt="Home" />
+        <img className={styles.Home} src={Home} alt="Home" />
       </NavLink>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/BrascoBG/Black-Jack"
       >
-        <img style={{ width: "40%" }} src={GitHub} alt="Git" />
+        <img className={styles.Git} src={GitHub} alt="Git" />
       </a>
     </div>
   );

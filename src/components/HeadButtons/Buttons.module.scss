@@ -1,11 +1,12 @@
 .buttons {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
+  .Home {
+    width: 44px;
+    padding: 6px;
+  }
+  .Git {
+    width: 45px;
+  }
   & img {
-    margin-top: 5px;
     opacity: 0.5;
     &:hover {
       opacity: 1;

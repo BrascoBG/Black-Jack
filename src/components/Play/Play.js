@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actionTypes from "../../store/actions";
 import styles from "./Play.module.scss";
 import Cards from "../Cards/Cards";
+import HeadButtons from "../HeadButtons/Buttons";
 
 const Play = () => {
   const money = useSelector((state) => state.moneyReducer.money);
@@ -88,6 +89,7 @@ const Play = () => {
 
   return (
     <div>
+      {!showApp && <HeadButtons />}
       <div className={!showApp ? styles.money : styles.moneysecond}>
         <h3>My Money</h3>
         <h1 className={styles.player}>${money}</h1>
