@@ -6,7 +6,7 @@ ReactJS SPA, built with ReactJS, Redux, React Hooks, React Router, GSAP Animatio
 
 ### Click on the link and check it out! :)
 
-...
+...soon
 
 ## Rules
 
@@ -22,4 +22,8 @@ Once all the players have completed their hands, it is the dealer's turn. The de
 
 ## ScreenShots
 
-...
+![screenshot](https://github.com/BrascoBG/Black-Jack/blob/master/src/assets/screenshots/intro.jpg?raw=true)
+
+![screenshot](https://github.com/BrascoBG/Black-Jack/blob/master/src/assets/screenshots/bet.jpg?raw=true)
+
+![screenshot](https://github.com/BrascoBG/Black-Jack/blob/master/src/assets/screenshots/play.jpg?raw=true)
