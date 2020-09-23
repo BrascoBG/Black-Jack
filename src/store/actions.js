@@ -9,4 +9,5 @@ export const MESSAGE_GAME_OVER = "MESSAGE_GAME_OVER";
 export const RESET_BETS = "RESET_BETS";
 export const RESET_CARDS = "RESET_CARDS";
 export const RESET_MESSAGE = "RESET_MESSAGE";
+export const RESET_MONEY = "RESET_MONEY";
 export const SHOW_APP_TOGGLE = "SHOW_APP_TOGGLE";

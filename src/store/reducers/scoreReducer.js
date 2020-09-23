@@ -1,8 +1,13 @@
 import * as actionTypes from "../actions";
 
 const casinoCard = Math.floor(Math.random() * 10) + 2;
-const userCard1 = Math.floor(Math.random() * 10) + 2;
-const userCard2 = Math.floor(Math.random() * 10) + 2;
+let userCard1 = Math.floor(Math.random() * 10) + 2;
+let userCard2 = Math.floor(Math.random() * 10) + 2;
+
+if (userCard1 === 11 && userCard2 === 11) {
+  userCard2 = Math.floor(Math.random() * 9) + 2;
+  console.log("ReRun");
+}
 
 const initialState = {
   casinoCards: [casinoCard],
@@ -27,8 +32,12 @@ const scoreReducer = (state = initialState, action) => {
       };
     case actionTypes.RESET_CARDS:
       const resCasinoCard = Math.floor(Math.random() * 10) + 2;
-      const resUserCard1 = Math.floor(Math.random() * 10) + 2;
-      const resUserCard2 = Math.floor(Math.random() * 10) + 2;
+      let resUserCard1 = Math.floor(Math.random() * 10) + 2;
+      let resUserCard2 = Math.floor(Math.random() * 10) + 2;
+      if (resUserCard1 === 11 && resUserCard2 === 11) {
+        resUserCard2 = Math.floor(Math.random() * 9) + 2;
+        console.log("Res ReRun");
+      }
       return {
         casinoCards: [resCasinoCard],
         casinoResult: resCasinoCard,

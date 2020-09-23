@@ -1,5 +1,15 @@
 const cardExport = [
   {
+    id: 0,
+    src: [
+      require("../../assets/cards/AH.png"),
+      require("../../assets/cards/AC.png"),
+      require("../../assets/cards/AD.png"),
+      require("../../assets/cards/AS.png"),
+    ].sort(() => 0.5 - Math.random()),
+    title: "eleven",
+  },
+  {
     id: 1,
     src: [
       require("../../assets/cards/2H.png"),

@@ -82,3 +82,12 @@ $goldenColor: linear-gradient(
     transform: scale(1);
   }
 }
+
+@media screen and(max-width: 600px) {
+  .buttons button {
+    margin-left: 200px;
+  }
+  .moneysecond {
+    width: 150px;
+  }
+}

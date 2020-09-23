@@ -7,8 +7,8 @@ import { gsap, TweenLite, Elastic } from "gsap";
 const Intro = () => {
   useEffect(() => {
     TweenLite.from(`.${styles.rela}`, 2, {
-      delay: 0.3,
-      y: -100,
+      delay: 0.2,
+      y: -300,
       ease: Elastic.easeOut,
     });
     gsap.fromTo(
@@ -36,13 +36,13 @@ const Intro = () => {
         </div>
       </div>
       <div className="btn-anime">
-        <NavLink to="/play">
+        <NavLink to="/rules">
           <button className={styles.button}>RULES</button>
         </NavLink>
         <NavLink to="/play">
           <button className={styles.Play}>PLAY</button>
         </NavLink>
-        <NavLink to="/play">
+        <NavLink to="/about">
           <button className={styles.button}>ABOUT</button>
         </NavLink>
       </div>

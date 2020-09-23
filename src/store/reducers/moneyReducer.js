@@ -16,6 +16,10 @@ const moneyReducer = (state = initialState, action) => {
         ...state,
         money: state.money - action.bet,
       };
+    case actionTypes.RESET_MONEY:
+      return {
+        money: 2000,
+      };
     default:
       return state;
   }

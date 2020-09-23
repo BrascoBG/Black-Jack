@@ -1,0 +1,53 @@
+.wrapper {
+  .image {
+    width: 250px;
+  }
+  .Info {
+    text-align: left;
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 50px;
+    border-radius: 10px;
+    h2 {
+      color: #cea738;
+      margin-bottom: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(212, 250, 136);
+      font-size: 40px;
+      font-weight: bold;
+      &:hover {
+        color: rgb(155, 155, 3);
+      }
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #cea738;
+      cursor: pointer;
+      &:hover {
+        background: rgb(155, 155, 3);
+      }
+    }
+    li {
+      margin-left: 5px;
+    }
+  }
+}
+@media screen and(max-width: 600px) {
+  .wrapper {
+    .Info {
+      width: 95%;
+      padding: 20px;
+      h2 {
+        font-size: 23px;
+      }
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+}

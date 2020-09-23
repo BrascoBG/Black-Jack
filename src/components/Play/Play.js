@@ -14,16 +14,24 @@ const Play = () => {
   const dispatch = useDispatch();
 
   const hit = () => {
+    let randomCard = Math.floor(Math.random() * 10) + 2;
+    if (userResult > 10 && randomCard === 11) {
+      randomCard = 1;
+    }
     dispatch({
       type: actionTypes.USER_CARD,
-      card: Math.floor(Math.random() * 10) + 2,
+      card: randomCard,
     });
   };
 
   const stand = () => {
+    let randomCard = Math.floor(Math.random() * 10) + 2;
+    if (casinoResult > 10 && randomCard === 11) {
+      randomCard = 1;
+    }
     dispatch({
       type: actionTypes.CASINO_CARD,
-      card: Math.floor(Math.random() * 10) + 2,
+      card: randomCard,
     });
   };
 
