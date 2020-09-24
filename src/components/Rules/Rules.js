@@ -96,7 +96,7 @@ const Rules = () => {
           Click here to see the code
         </a>
         <br />
-        <NavLink to="/">
+        <NavLink to="/Black-Jack-Live">
           <button>&larr; BACK</button>
         </NavLink>
       </div>

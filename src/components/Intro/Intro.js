@@ -37,13 +37,13 @@ const Intro = () => {
         </div>
       </div>
       <div className="btn-anime">
-        <NavLink to="/rules">
+        <NavLink to="/Black-Jack-Live/rules">
           <button className={styles.button}>RULES</button>
         </NavLink>
-        <NavLink to="/play">
+        <NavLink to="/Black-Jack-Live/play">
           <button className={styles.Play}>PLAY</button>
         </NavLink>
-        <NavLink to="/about">
+        <NavLink to="/Black-Jack-Live/about">
           <button className={styles.button}>ABOUT</button>
         </NavLink>
       </div>

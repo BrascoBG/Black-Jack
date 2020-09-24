@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/" exact component={Intro} />
-        <Route path="/play" component={Play} />
-        <Route path="/play" component={Bet} />
-        <Route path="/about" component={About} />
-        <Route path="/rules" component={Rules} />
+        <Route path="/Black-Jack-Live" exact component={Intro} />
+        <Route path="/Black-Jack-Live/play" component={Play} />
+        <Route path="/Black-Jack-Live/play" component={Bet} />
+        <Route path="/Black-Jack-Live/about" component={About} />
+        <Route path="/Black-Jack-Live/rules" component={Rules} />
       </BrowserRouter>
     </div>
   );

@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const Buttons = () => {
   return (
     <div className={styles.buttons}>
-      <NavLink to="/">
+      <NavLink to="/Black-Jack-Live">
         <img className={styles.Home} src={Home} alt="Home" />
       </NavLink>
       <a

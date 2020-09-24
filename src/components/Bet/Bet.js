@@ -122,7 +122,7 @@ const Bet = () => {
           OK
         </button>
       </Modal>
-      {gameOver && <Redirect to="/" />}
+      {gameOver && <Redirect to="/Black-Jack-Live" />}
       <div
         className={styles.wrap}
         style={showApp ? { display: "none" } : { display: "block" }}
