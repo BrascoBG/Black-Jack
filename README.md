@@ -4,7 +4,7 @@ ReactJS SPA, built with ReactJS, Redux, React Hooks, React Router, GSAP Animatio
 
 ### Click on the link and check it out! :)
 
-[Click Here And Try It](https://BrascoBG.github.io/black-jack-live)
+[Ivo's Black Jack](https://BrascoBG.github.io/black-jack-live/)
 
 **Note: With the exception of Poker, Blackjack is the most popular gambling card game.**
 
