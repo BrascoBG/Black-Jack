@@ -2,11 +2,11 @@
 
 ReactJS SPA, built with ReactJS, Redux, React Hooks, React Router, GSAP Animations, CSS/SASS, FlexBox.
 
-**Note: With the exception of Poker, Blackjack is the most popular gambling card game.**
-
 ### Click on the link and check it out! :)
 
 ...soon
+
+**Note: With the exception of Poker, Blackjack is the most popular gambling card game.**
 
 ## Rules
 

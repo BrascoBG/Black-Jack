@@ -6,7 +6,6 @@ let userCard2 = Math.floor(Math.random() * 10) + 2;
 
 if (userCard1 === 11 && userCard2 === 11) {
   userCard2 = Math.floor(Math.random() * 9) + 2;
-  console.log("ReRun");
 }
 
 const initialState = {
@@ -36,7 +35,6 @@ const scoreReducer = (state = initialState, action) => {
       let resUserCard2 = Math.floor(Math.random() * 10) + 2;
       if (resUserCard1 === 11 && resUserCard2 === 11) {
         resUserCard2 = Math.floor(Math.random() * 9) + 2;
-        console.log("Res ReRun");
       }
       return {
         casinoCards: [resCasinoCard],

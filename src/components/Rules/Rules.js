@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./Rules.module.scss";
-import AboutImg from "../../assets/images/about2.png";
+import RulesImg from "../../assets/images/rules.png";
 import { NavLink } from "react-router-dom";
 import { gsap, TweenLite, Elastic } from "gsap";
 
@@ -28,7 +28,7 @@ const Rules = () => {
 
   return (
     <div className={styles.wrapper}>
-      <img className={styles.image} alt="logo" src={AboutImg} />
+      <img className={styles.image} alt="logo" src={RulesImg} />
       <div className={styles.Info}>
         <h2>RULES</h2>
         <h4>

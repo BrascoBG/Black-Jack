@@ -6,6 +6,7 @@ import { gsap, TweenLite, Elastic } from "gsap";
 
 const Intro = () => {
   useEffect(() => {
+    window.scroll(0, 0);
     TweenLite.from(`.${styles.rela}`, 2, {
       delay: 0.2,
       y: -300,
